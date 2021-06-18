@@ -1,0 +1,20 @@
+---
+title: "Factors"
+author: "mysteryTurtle"
+date: "6/17/2021"
+output: pdf_document
+---
+
+## Factors
+- ordered || unordered
+- special type of vector
+- storing categorical data
+- lm() || glm()
+- label
+- attributes: levels
+```{r}
+x <- factor(c("yes", "yes", "no", "yes", "no"))
+x
+table(x)
+unclass(x)
+```
