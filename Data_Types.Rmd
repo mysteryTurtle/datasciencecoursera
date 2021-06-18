@@ -1,0 +1,53 @@
+---
+title: "R Nuts and Bolts"
+author: "mysteryTurtle"
+date: "6/17/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+5 basic classes of objects
+- character
+- numeric (real numbers)
+- integer
+- complex
+- logical
+
+Most basic object: vector
+Vectors contain same objects; Lists different
+
+## Creating empty vector
+```{r}
+vector()
+print()
+```
+
+
+## Numbers
+- numeric, double precision
+- for integer, specify L suffix
+
+```{r}
+num <- 1
+inte <- 1L
+```
+
+## Special Num 
+- Inf 
+- NaN
+
+## Attributes
+- R objects can have attributes
+- names, dimension, class, length
+```{r}
+attributes() # attributes of object accessed through this
+```
+
+
+
+
