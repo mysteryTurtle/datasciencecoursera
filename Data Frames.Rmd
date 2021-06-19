@@ -1,0 +1,27 @@
+---
+title: "DataFrame"
+author: "mysteryTurtle"
+date: "6/19/2021"
+output: pdf_document
+---
+
+
+## Data Frames
+- special type of list
+- for each elem of list has same length
+- store different calsses in each column
+- attributes:
+- row.names
+- created by read.table() || read.csv()
+- can convert matrix by calling data.matrix()
+
+```{r}
+x <- data.frame(foo = 1:4, bar = c(T,T,F,F))
+x
+row.names(x)
+print("Number of rows: ", nrow(x)) # ??? why isn't this working
+print("Number of cols: ", ncol(x))
+
+```
+
+
