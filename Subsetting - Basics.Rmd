@@ -1,0 +1,23 @@
+---
+title: "Subsetting"
+author: "mysteryTurtle"
+date: "6/19/2021"
+output: pdf_document
+---
+
+## Subsetting
+- [] always returns object of same class as the original
+- [[]] extracts elements of a list or a data frame; it can be used to extract a single element and the class of the returned object will not necessarily e a list or data frame
+- $ extracts elements of a list or data frame by name
+```{r}
+x <- c("a", "b", "c", "c", "d", "a")
+x[1] # subset the first element
+x[2] # subset 2nd elem
+x[1:4] # subset elements w/ indices 1 through 4
+
+x[x > 'a'] # subset w/ elements greater than a
+
+u <- x > 'a'
+u
+x[u] # subset with a logical vector
+```
