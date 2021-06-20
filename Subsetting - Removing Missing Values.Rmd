@@ -1,0 +1,34 @@
+---
+title: "Subsetting - Removing Missing Val"
+author: "mysteryTurtle"
+date: "6/20/2021"
+output: pdf_document
+---
+
+## Removing NA Values
+```{r}
+x <- c(1,2, NA, 4, NA, 5)
+bad <- is.na(x) # logical vector
+x <- x[!bad] # now x will contain non-NA values
+x
+```
+
+- What if there are multiple things and you want to take the subset with no missing values?
+
+```{r}
+x <- c(1, 2, NA, 4, NA, 5)
+y <- c('a', 'b', NA, 'd', NA, 'f')
+good <- complete.cases(x, y)
+good
+x[good]
+y[good]
+```
+
+## Another example with data frames
+```{r}
+airquality[1:6, ] # ret. rows 1:6 and all columns
+good <- complete.cases(airquality)
+airquality[good, ][1:6, ] # will first subset out all the good complete rows, then subset the first 6 rows
+```
+
+

@@ -1,0 +1,31 @@
+---
+title: "Vectorized Operations"
+author: "mysteryTurtle"
+date: "6/20/2021"
+output: pdf_document
+---
+
+## Vectorized Operations
+```{r}
+x <- 1:4; y <- 6:9
+x + y
+x > 2
+x >= 2
+y == 8
+x * y
+x/y
+```
+
+## Vectorized Matrix Operations
+```{r}
+x <- matrix(1:4, 2, 2); y <- matrix(rep(10,4), 2, 2)
+x
+y
+x * y ## element wise multiplication
+x / y ## element wise division
+
+x %*% y ## true matrix multipllication
+```
+
+
+
