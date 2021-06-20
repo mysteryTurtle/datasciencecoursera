@@ -1,0 +1,50 @@
+---
+title: "Subsetting - Lists"
+author: "mysteryTurtle"
+date: "6/19/2021"
+output: pdf_document
+---
+
+## Subsetting lists
+
+```{r}
+x <- list(foo = 1:4, bar = .6)
+x[1] # returns a list w/ name 'foo' w/ seq 1:4
+x[[1]] # returns that element of the list, which is a seq of 1:4
+x$bar # extracts elements by the name of 'bar'
+x[["bar"]] # should also work the same
+x["bar"]
+```
+
+## Extracting multiple elements
+```{r}
+# can only use the [], the others don't work
+x <- list(foo = 1:4, bar = .6, baz = "hello")
+x[c(1,3)]
+```
+
+## using the [[]] vs $
+- [[]] can be used with computed indices
+- $ can only be used with literal names
+```{r}
+x <- list(foo = 1:4, bar = .5, baz = 'hello')
+name <- 'foo'
+x[[name]] # computed index for 'foo'
+x$name # element 'name' does not exist
+x$foo
+```
+
+## Subsetting Nested Elements of a List
+```{r}
+x <- list(a = list(10,12,14), b = c(3.14,2.81))
+x[[c(1,3)]] # returns 3rd elem of 1st elem
+x[[1]][[3]] # achieves same goal
+x[[c(2,1)]]
+```
+
+
+
+
+
+
+
