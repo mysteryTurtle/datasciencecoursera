@@ -1,0 +1,28 @@
+---
+title: "Control Structures - if-else"
+author: "mysteryTurtle"
+date: "6/20/2021"
+output: pdf_document
+---
+
+## if else
+```{r}
+if (x > 3) {
+        y <- 10
+} else {
+        y <- 0
+}
+
+## another way of writing this
+y <- if(x>3) {
+        10
+} else {
+        0
+}
+
+```
+
+
+
+
+

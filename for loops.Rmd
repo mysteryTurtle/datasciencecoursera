@@ -1,0 +1,43 @@
+---
+title: "for loops"
+author: "mysteryTurtle"
+date: "6/20/2021"
+output: pdf_document
+---
+
+## for loops
+- take iterator variable and assign it successive values from a sequence or vector
+- used for iterating over elements of an object
+
+```{r}
+for(i in 1:10) {
+        print(i)
+}
+
+# following loops do the same thing
+x <- c('a','b','c','d')
+for(i in 1:4) {
+        print(x[i])
+}
+
+for(i in seq_along(x)) {
+        print(x[i])
+}
+
+for(letter in x) {
+        print(letter)
+}
+```
+
+## Nested for loops
+```{r}
+x <- matrix(1:6, 2, 3)
+for(i in seq_len(nrow(x))) {
+        for(j in seq_len(ncol(x))) {
+                print(x[i,j])
+        }
+}
+```
+
+
+
