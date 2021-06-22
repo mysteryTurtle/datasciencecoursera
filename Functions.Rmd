@@ -1,0 +1,41 @@
+---
+title: "Functions"
+author: "mysteryTurtle"
+date: "6/21/2021"
+output: pdf_document
+---
+
+```{r}
+
+# function 1
+add2 <- function(x, y) {
+        x + y
+}
+
+# function 2
+above10 <- function(x) {
+        use <- x > 10 # logical vector of T/F
+        x[use] # subsets the vector w/ use
+}
+
+# function 3
+above <- function(x, n = 10) {
+        use <- x > n
+        x[use] # returns all numbers > n
+}
+
+# function 4
+columnmean <- function(y, removeNA = TRUE) {
+        nc <- ncol(y)
+        means <- numeric(nc) # empty vector with all zeros
+        
+        for(i in 1:nc) {
+                means[i] <- mean(y[,i], na.rm = removeNA)
+        }
+        means # returns, since is last exp
+}
+```
+
+
+
+
