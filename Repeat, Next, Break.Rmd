@@ -1,0 +1,39 @@
+---
+title: "Repeat, Next, Break"
+author: "mysteryTurtle"
+date: "6/21/2021"
+output: pdf_document
+---
+
+## Repeat Loop
+- initiates infinite loop
+- need to call break
+
+```{r}
+x0 <- 1
+tol <- 1e-8
+repeat{
+        x1 <- computeEstimate()
+        if(abs(x1-x0) < tol) {
+                break
+        } else {
+                x0 <- x1
+        }
+}
+```
+
+## Next
+- skips an iteration of a loop
+```{r}
+for(i in 1:100) {
+        if(i <= 20){
+                ## skip the first 20 iterations
+                next
+        }
+        ## do something here
+}
+```
+
+## return
+- signals that a function should exit and return a given value
+
