@@ -5,6 +5,7 @@ date: "6/21/2021"
 output: pdf_document
 ---
 
+## Functions Intro
 ```{r}
 
 # function 1
@@ -35,6 +36,52 @@ columnmean <- function(y, removeNA = TRUE) {
         means # returns, since is last exp
 }
 ```
+
+## Functions (More notes)
+- defined by function()
+
+```{r}
+f <- function() {
+        # empty function
+}
+
+f <- function(num) {
+        for(i in seq_len(num)) {
+                cat("Hello, world!\n")
+        }
+}
+
+# returns total num of characters printed to console
+f <- function(num = 1) {
+        hello <- "Hello, world!\n"
+        for(i in seq_len(num)) {
+                cat(hello)
+        }
+        chars <- nchar(hello) * num
+        chars
+}
+f()
+f(2)
+meaningoflife <- f(3)
+print(meaningoflife)
+```
+
+## Argument Matching
+- matched positionally || name
+
+
+## The ... argument
+- variable number of arguments passed on to other functions
+- used when extending another function and you don't want to copy the entire argument list of the original function
+- arguments that appear after ... on the argument list must be named explicitly and cannot be partially matched or matched positionally
+
+```{r}
+myplot <- function(x, y, type = '1', ...) {
+        plot(x, y, type = type, ...)
+}
+
+```
+
 
 
 
