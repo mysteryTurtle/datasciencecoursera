@@ -1,0 +1,22 @@
+---
+title: "Apply"
+author: "mysteryTurtle"
+date: "8/1/2021"
+output: pdf_document
+---
+
+```{r}
+x <- matrix(rnorm(200), 20, 10)
+apply(x, 2, mean) # vector of length 10 with mean of all columns; 2 refers to column - rows got eliminated
+
+apply(x, 1, sum) # vector of length 20, columns got eliminated; 1 refers to rows
+
+x <- matrix(rnorm(200), 20, 10)
+apply(x, 1, quantile, probs = c(0.25, 0.75))
+
+
+
+```
+
+
+
