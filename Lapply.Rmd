@@ -1,0 +1,32 @@
+---
+title: "lapply"
+author: "mysteryTurtle"
+date: "8/1/2021"
+output: pdf_document
+---
+
+3 arguments
+1) list
+2) function
+3) other
+
+```{r}
+x <- list(a = 1:5, b = rnorm(10)) # creating list
+lapply(x, mean) # function mean is applied to a and b
+
+x <- 1:4
+lapply(x, runif)
+lapply(x, runif, min = 0, max = 10) # additional args apply to the runif function
+
+x <- list(a = matrix(1:4, 2, 2), b = matrix(1:6, 3, 2))
+
+#extract from each column
+lapply(x, function(elt) elt[,1])
+
+
+```
+
+
+
+
+
